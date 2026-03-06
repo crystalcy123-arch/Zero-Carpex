@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @media print {
+    .print\:hidden {
+      display: none !important;
+    }
+    
+    body {
+      background-color: white !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    header {
+      height: auto !important;
+      padding-bottom: 2rem !important;
+    }
+
+    section {
+      page-break-inside: avoid;
+    }
+
+    nav {
+      display: none !important;
+    }
+  }
+}
